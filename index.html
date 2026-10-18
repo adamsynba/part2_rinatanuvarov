@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy — JavaScript Individual Tasks</title>
+  <style>
+    :root{--ink:#18352e;--green:#2f6b55;--mint:#eaf3ed;--paper:#f7f8f4;--line:#d8e2db;--muted:#60736a}
+    *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+    header{background:var(--ink);color:white;padding:26px max(22px,calc((100% - 1080px)/2))}header .brand{font-size:1.5rem;font-weight:800;letter-spacing:.02em}header p{margin:5px 0 0;color:#d7e8dd}
+    main{max-width:1080px;margin:28px auto;padding:0 20px 50px}.intro{background:var(--mint);padding:22px;border-radius:16px;margin-bottom:20px}.intro h1{margin:0 0 8px;font-size:1.8rem}.intro p{margin:0;color:#405c50}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.task{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 5px 16px #18352e0a}.task h2{font-size:1.1rem;margin:0 0 8px}.task p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
+    button{border:0;border-radius:9px;background:var(--green);color:white;padding:10px 14px;font-weight:700;cursor:pointer}button:hover{filter:brightness(.92)}button.secondary{background:#e8eee9;color:var(--ink);border:1px solid var(--line)}
+    pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f6f3;border:1px solid var(--line);border-radius:9px;padding:12px;min-height:42px;font: .88rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;margin:12px 0 0;color:#213e32}
+    .note{font-size:.9rem;color:var(--muted);margin-top:18px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}footer{text-align:center;color:var(--muted);padding:20px}
+    @media(max-width:700px){.grid{grid-template-columns:1fr}header{padding:22px}.intro h1{font-size:1.45rem}main{margin-top:18px}}
+  </style>
+</head>
+<body>
+<header><div class="brand">Healthy</div><p>Assignment #5 · Part 2 — Introduction to JavaScript</p></header>
+<main>
+  <section class="intro">
+    <h1>Individual JavaScript Tasks 6–12</h1>
+    <p><strong>Student:</strong> Rinat Anuvarov &nbsp; | &nbsp; <strong>Group:</strong> MT-2505</p>
+    <p>Choose a task and click its button. Prompt-based tasks open browser dialogs; results are also shown below each task and written to the browser console.</p>
+  </section>
+  <div class="grid">
+    <section class="task"><h2>Task 6 — Variables and data types</h2><p>Uses let, const, string, number, boolean, typeof, and reassignment.</p><button onclick="runTask6()">Run Task 6</button><pre id="out6">Click “Run Task 6” to display the results.</pre></section>
+    <section class="task"><h2>Task 7 — Input and a greeting</h2><p>Asks for a name using prompt(), shows an alert(), and logs a greeting with the student name and group.</p><button onclick="runTask7()">Run Task 7</button><pre id="out7">Click “Run Task 7” to start.</pre></section>
+    <section class="task"><h2>Task 8 — Sum and arithmetic</h2><p>Reads two numbers, converts them with Number(), then calculates five arithmetic results.</p><button onclick="runTask8()">Run Task 8</button><pre id="out8">Try the sample values 12 and 5 to verify: 17, 7, 60, 2.4, 2.</pre></section>
+    <section class="task"><h2>Task 9 — Strings</h2><p>Shows string length, uppercase/lowercase, slice(), and sentence concatenation.</p><button onclick="runTask9()">Run Task 9</button><pre id="out9">Click “Run Task 9” to display the results.</pre></section>
+    <section class="task"><h2>Task 10 — Increment and assignment operators</h2><p>Starts with counter = 10 and applies ++, --, +=, -=, *=, and /= in order.</p><button onclick="runTask10()">Run Task 10</button><pre id="out10">Click “Run Task 10” to display each value.</pre></section>
+    <section class="task"><h2>Task 11 — Dog age calculation</h2><p>Uses the exact lecture formula and tests dogAge values 2 and 5.</p><button onclick="runTask11()">Run Task 11</button><pre id="out11">Click “Run Task 11” to display both tests.</pre></section>
+    <section class="task"><h2>Task 12 — Functions</h2><p>Defines and calls greetUser(name), calculateSum(a, b), and calculateRectangleArea(width, height).</p><button onclick="runTask12()">Run Task 12</button><pre id="out12">Click “Run Task 12” to display the results.</pre></section>
+    <section class="task"><h2>Console and instructions</h2><p>Open Developer Tools → Console to view the same task output. In Chrome/Safari, use right-click → Inspect → Console.</p><div class="actions"><button class="secondary" onclick="clearOutputs()">Clear results</button><button onclick="runAllNonPromptTasks()">Run Tasks 6, 9–12</button></div><pre id="outHelp">Prompt tasks (7 and 8) are run separately so the dialogs do not appear all at once.</pre></section>
+  </div>
+  <p class="note"><strong>Note:</strong> This is a frontend demonstration only. It does not create accounts or send data to a server.</p>
+</main>
+<footer>Healthy · Assignment #5 · Part 2</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
